@@ -56,8 +56,8 @@ def main():
     # {"premise": "Two women are embracing.", "hypothesis": "The sisters are hugging.", "label": 1}
     if args.dataset == "squad_adv":
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad.json')
-        squad_dataset = datasets.load_dataset('json', data_files = adv_squad_path)
-        dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
+        dataset = datasets.load_dataset('json', data_files = adv_squad_path)
+        #dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
         eval_split = 'validation'
     
     elif args.dataset.endswith('.json') or args.dataset.endswith('.jsonl'):
