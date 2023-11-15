@@ -54,7 +54,7 @@ def main():
     # You need to format the dataset appropriately. For SNLI, you can prepare a file with each line containing one
     # example as follows:
     # {"premise": "Two women are embracing.", "hypothesis": "The sisters are hugging.", "label": 1}
-    if args.dataset = "squad_adv":
+    if args.dataset == "squad_adv":
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad.json')
         squad_dataset = datasets.load_dataset('json', data_files = adv_squad_path)
         dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
