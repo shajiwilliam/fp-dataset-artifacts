@@ -126,8 +126,8 @@ def main():
         eval_dataset_featurized = eval_dataset.map(
             prepare_eval_dataset,
             batched=True,
-            num_proc=NUM_PREPROCESSING_WORKERS,
-            remove_columns=eval_dataset.column_names
+            num_proc=NUM_PREPROCESSING_WORKERS
+            #,remove_columns=eval_dataset.column_names
         )
 
     # Select the training configuration
