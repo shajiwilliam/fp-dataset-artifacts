@@ -57,8 +57,8 @@ def main():
     if args.dataset == "squad_adv":
         dataset_id = None
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad.json')
-        dataset = datasets.load_dataset('json', data_files = adv_squad_path)
-        dataset = {'train': dataset, 'validation': dataset}
+        adv_dataset = datasets.load_dataset('json', data_files = adv_squad_path)
+        dataset = {'train': adv_dataset, 'validation': adv_dataset}
         eval_split = 'validation'
     
     elif args.dataset.endswith('.json') or args.dataset.endswith('.jsonl'):
