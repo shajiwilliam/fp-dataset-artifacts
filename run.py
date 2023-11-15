@@ -127,7 +127,7 @@ def main():
             prepare_eval_dataset,
             batched=True,
             num_proc=NUM_PREPROCESSING_WORKERS
-            #,remove_columns=eval_dataset.column_names
+            ,remove_columns=eval_dataset.column_names
         )
 
     # Select the training configuration
