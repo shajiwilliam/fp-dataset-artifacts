@@ -57,7 +57,8 @@ def main():
     if args.dataset == "squad_adv":
         dataset_id = None
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad.json')
-        adv_dataset = datasets.load_dataset('json', data_files = adv_squad_path)
+        #adv_dataset = datasets.load_dataset('json', data_files = adv_squad_path)
+        adv_dataset = datasets.load_dataset('/content/fp-dataset-artifacts/adverse_data_set_squad.json')
         dataset = {'train': adv_dataset, 'validation': adv_dataset}
         eval_split = 'validation'
     
