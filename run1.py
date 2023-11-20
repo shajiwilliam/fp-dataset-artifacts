@@ -55,7 +55,7 @@ def main():
     if args.dataset == 'combined_squad_adv_squad':
         dataset_id = 'qa'
         squad_dataset = datasets.load_dataset('squad')
-        adv_squad_dataset = datasets.load_dataset('json', data_files=adv_squad_path,features=squad["train"].features)  
+        adv_squad_dataset = datasets.load_dataset('json', data_files=adv_squad_path,features=squad_dataset["train"].features)  
     
         combined_train_dataset = datasets.concatenate_datasets([squad_dataset['train'], adv_squad_dataset['train']])
         #combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['validation']])
