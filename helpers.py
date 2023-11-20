@@ -118,6 +118,9 @@ def prepare_train_dataset_qa(examples, tokenizer, max_seq_length=None):
 
 
 def prepare_validation_dataset_qa(examples, tokenizer):
+    for key,value in examples.items():
+        print("prepare_validation_dataset_qa",key)
+
     questions = [q.lstrip() for q in examples["question"]]
     max_seq_length = tokenizer.model_max_length
     tokenized_examples = tokenizer(
