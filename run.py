@@ -94,7 +94,8 @@ def main():
     # Select the dataset preprocessing function (these functions are defined in helpers.py)
     if args.task == 'qa':
         prepare_train_dataset = lambda exs: prepare_train_dataset_qa(exs, tokenizer)
-        prepare_eval_dataset = lambda exs: prepare_validation_dataset_qa(exs, tokenizer)
+        #prepare_eval_dataset = lambda exs: prepare_validation_dataset_qa(exs, tokenizer)
+        prepare_eval_dataset = prepare_train_dataset
     elif args.task == 'nli':
         prepare_train_dataset = prepare_eval_dataset = \
             lambda exs: prepare_dataset_nli(exs, tokenizer, args.max_length)
