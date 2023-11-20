@@ -53,6 +53,7 @@ def main():
     adv_squad_path = os.path.join(os.getcwd(), 'test.json')
 
     if args.dataset == 'combined_squad_adv_squad':
+        dataset_id = 'qa'
         squad_dataset = datasets.load_dataset('squad')
         adv_squad_dataset = datasets.load_dataset('json', data_files=adv_squad_path)  
     
