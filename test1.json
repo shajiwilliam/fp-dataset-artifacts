@@ -1,0 +1,131 @@
+{
+    "version": "1.1",
+    "data": [
+      {
+        "title": "Adv_SQuAD",
+        "paragraphs": [
+          {
+            "context": "The population of Australia is heavily concentrated on the eastern seaboard, where the largest cities, Sydney and Melbourne, are located.",
+            "qas": [
+              {
+                "id": "00001",
+                "question": "Which major cities in Australia have the highest population density?",
+                "answers": [
+                  {
+                    "answer_start": 97,
+                    "text": ["Sydney and Melbourne"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "Albert Einstein developed the theory of relativity, which fundamentally changed our understanding of space, time, and gravity.",
+            "qas": [
+              {
+                "id": "00002",
+                "question": "Whose work drastically altered the perception of space, time, and gravity?",
+                "answers": [
+                  {
+                    "answer_start": 0,
+                    "text": ["Albert Einstein"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "The French Revolution began in 1789 and led to significant political, social, and economic changes in France, ultimately resulting in the rise of Napoleon Bonaparte.",
+            "qas": [
+              {
+                "id": "00003",
+                "question": "Which historical event paved the way for Napoleon Bonaparte's ascent to power?",
+                "answers": [
+                  {
+                    "answer_start": 4,
+                    "text": ["The French Revolution"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "The Great Barrier Reef, located off the coast of Queensland in northeastern Australia, is the largest coral reef system in the world, comprising over 2,900 individual reefs and 900 islands.",
+            "qas": [
+              {
+                "id": "00004",
+                "question": "Where can one find the world's most extensive coral reef system?",
+                "answers": [
+                  {
+                    "answer_start": 38,
+                    "text": ["off the coast of Queensland in northeastern Australia"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "Although Pluto was once classified as a planet, it was redefined as a 'dwarf planet' by the International Astronomical Union in 2006 due to its smaller size and irregular orbit.",
+            "qas": [
+              {
+                "id": "00005",
+                "question": "Why was Pluto's planetary status changed in 2006?",
+                "answers": [
+                  {
+                    "answer_start": 94,
+                    "text": ["due to its smaller size and irregular orbit"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "The Amazon Rainforest, also known as Amazonia, is the world's largest tropical rainforest, covering an area of approximately 6.7 million square kilometers.",
+            "qas": [
+              {
+                "id": "00006",
+                "question": "What alternative name is the Amazon Rainforest known by?",
+                "answers": [
+                  {
+                    "answer_start": 28,
+                    "text": "Amazonia"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "The Industrial Revolution was a period of major industrialization and innovation that began in Great Britain and later spread to other parts of the world.",
+            "qas": [
+              {
+                "id": "00007",
+                "question": "Where did the Industrial Revolution originate?",
+                "answers": [
+                  {
+                    "answer_start": 80,
+                    "text": ["Great Britain"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "context": "The Grand Canyon, a steep-sided canyon carved by the Colorado River, is located in the state of Arizona in the United States and is considered one of the world's most spectacular natural landmarks.",
+            "qas": [
+              {
+                "id": "00008",
+                "question": "Which river is responsible for carving the Grand Canyon?",
+                "answers": [
+                  {
+                    "answer_start": 42,
+                    "text": ["the Colorado River"]
+                  }
+                ]
+              }
+            ]
+          }
+            ]
+          }
+        ]
+      }
+    
