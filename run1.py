@@ -50,17 +50,14 @@ def main():
     training_args, args = argp.parse_args_into_dataclasses()
 
     # Dataset selection
-    adv_squad_path = os.path.join(os.getcwd(), 'test1.json')
+    adv_squad_path = os.path.join(os.getcwd(), 'test.json')
 
     if args.dataset == 'combined_squad_adv_squad':
-        dataset_id = None
         squad_dataset = datasets.load_dataset('squad')
         adv_squad_dataset = datasets.load_dataset('json', data_files=adv_squad_path)  
     
-        #combined_train_dataset = datasets.concatenate_datasets([squad_dataset['train'], adv_squad_dataset['train']])
-        #combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['train']])
-        combined_train_dataset = adv_squad_dataset['train'] 
-        combined_eval_dataset = adv_squad_dataset['train']
+        combined_train_dataset = datasets.concatenate_datasets([squad_dataset['train'], adv_squad_dataset['train']])
+        combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['validation']])
     
         dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
         eval_split = 'validation'
@@ -95,8 +92,7 @@ def main():
     # Select the dataset preprocessing function (these functions are defined in helpers.py)
     if args.task == 'qa':
         prepare_train_dataset = lambda exs: prepare_train_dataset_qa(exs, tokenizer)
-        #prepare_eval_dataset = lambda exs: prepare_validation_dataset_qa(exs, tokenizer)
-        prepare_eval_dataset = prepare_train_dataset 
+        prepare_eval_dataset = lambda exs: prepare_validation_dataset_qa(exs, tokenizer)
     elif args.task == 'nli':
         prepare_train_dataset = prepare_eval_dataset = \
             lambda exs: prepare_dataset_nli(exs, tokenizer, args.max_length)
