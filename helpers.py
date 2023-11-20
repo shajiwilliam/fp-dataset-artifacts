@@ -40,7 +40,7 @@ def compute_accuracy(eval_preds: EvalPrediction):
 # and finding the right offsets for the answer spans in the tokenized context (to use as labels).
 # Adapted from https://github.com/huggingface/transformers/blob/master/examples/pytorch/question-answering/run_qa.py
 def prepare_train_dataset_qa(examples, tokenizer, max_seq_length=None):
-    for key,value in examples,items():
+    for key,value in examples.items():
         print("prepare_train_dataset_qa",key)
     questions = [q.lstrip() for q in examples["question"]]
     max_seq_length = tokenizer.model_max_length
