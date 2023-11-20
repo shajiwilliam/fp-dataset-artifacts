@@ -50,7 +50,7 @@ def main():
     training_args, args = argp.parse_args_into_dataclasses()
 
     # Dataset selection
-    adv_squad_path = os.path.join(os.getcwd(), 'test.json')
+    adv_squad_path = os.path.join(os.getcwd(), 'test1.json')
 
     if args.dataset == 'combined_squad_adv_squad':
         dataset_id = 'qa'
@@ -61,8 +61,6 @@ def main():
         #combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['validation']])
         combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['train']])
 
-        squad_get = datasets.load_dataset("squad")
-        squad_get.to_json("squad.json")     
         
         #dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
         #eval_split = 'validation'
