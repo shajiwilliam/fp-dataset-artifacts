@@ -61,7 +61,7 @@ def main():
         #combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['validation']])
         combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['train']])
 
-        squad_get = datasets.load_dataset("squad", split="validation")        
+        squad_get = datasets.load_dataset("squad")
         squad_get.to_json("squad.json")     
         
         #dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
