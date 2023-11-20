@@ -2,40 +2,31 @@
     "version": "1.1",
     "data": [
       {
-        "title": "Adv_SQuAD",
-        "paragraphs": [
-          {
-            "context": "The population of Australia is heavily concentrated on the eastern seaboard, where the largest cities, Sydney and Melbourne, are located.",
-            "qas": [
-              {
-                "id": "00001",
-                "question": "Which major cities in Australia have the highest population density?",
-                "answers": [
+           "answers": [
                   {
                     "answer_start": 97,
                     "text": ["Sydney and Melbourne"]
                   }
-                ]
+                ],
+        "title": "Adv_SQuAD",
+            "context": "The population of Australia is heavily concentrated on the eastern seaboard, where the largest cities, Sydney and Melbourne, are located.",
+                "id": "00001",
+                "question": "Which major cities in Australia have the highest population density?"
+               
               }
-            ]
-          },
+            ,
             {
-            "context": "Albert Einstein developed the theory of relativity, which fundamentally changed our understanding of space, time, and gravity.",
-            "qas": [
-              {
-                "id": "00002",
-                "question": "Whose work drastically altered the perception of space, time, and gravity?",
                 "answers": [
                   {
                     "answer_start": 0,
                     "text": ["Albert Einstein"]
                   }
-                ]
-              }
-            ]
+                ],
+                "title": "Adv_SQuAD",
+            "context": "Albert Einstein developed the theory of relativity, which fundamentally changed our understanding of space, time, and gravity.",
+                "id": "00002",
+                "question": "Whose work drastically altered the perception of space, time, and gravity?"
+                
           }
-            ]
-          }
-        ]
-      }
-    
+    ]
+}    
