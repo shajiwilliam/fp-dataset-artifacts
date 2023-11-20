@@ -60,7 +60,10 @@ def main():
         combined_train_dataset = datasets.concatenate_datasets([squad_dataset['train'], adv_squad_dataset['train']])
         #combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['validation']])
         combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['train']])
-    
+
+        for key, value in squad_dataset['validation'].items():
+            print("Printing orig squad validation ", key)
+        
         #dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
         #eval_split = 'validation'
         dataset = adv_squad_dataset
