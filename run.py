@@ -54,13 +54,13 @@ def main():
     # You need to format the dataset appropriately. For SNLI, you can prepare a file with each line containing one
     # example as follows:
     # {"premise": "Two women are embracing.", "hypothesis": "The sisters are hugging.", "label": 1}
-    if args.dataset == "squad_adv":
+    if args.dataset == "combined_squad_adv_squad":
         dataset_id = None
         #adv_squad_path = os.path.join('/content/fp-dataset-artifacts/', 'adverse_data_set_squad.json')
-        adv_squad_path = os.path.join('/content/fp-dataset-artifacts/', 'test.json')
+        adv_squad_path = os.path.join('/content/fp-dataset-artifacts/', 'test1.json')
         adv_dataset = datasets.load_dataset('json', data_files = adv_squad_path)
         #adv_dataset = datasets.load_dataset('/content/fp-dataset-artifacts/adverse_data_set_squad.json')
-        dataset = {'train': adv_dataset, 'validation': adv_dataset}
+        dataset = {'train': adv_dataset['train'], 'validation': adv_dataset['train']}
         eval_split = 'validation'
     
     elif args.dataset.endswith('.json') or args.dataset.endswith('.jsonl'):
