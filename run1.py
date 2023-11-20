@@ -62,7 +62,8 @@ def main():
         combined_eval_dataset = datasets.concatenate_datasets([squad_dataset['validation'], adv_squad_dataset['train']])
     
         dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
-        eval_split = 'validation'
+        #eval_split = 'validation'
+        eval_split = 'train'
     elif args.dataset.endswith('.json') or args.dataset.endswith('.jsonl'):
         dataset_id = None
         # Load from local json/jsonl file
