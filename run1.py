@@ -8,7 +8,6 @@ import json
 
 NUM_PREPROCESSING_WORKERS = 2
 
-
 def main():
     argp = HfArgumentParser(TrainingArguments)
     # The HfArgumentParser object collects command-line arguments into an object (and provides default values for unspecified arguments).
