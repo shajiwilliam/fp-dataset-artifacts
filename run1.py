@@ -52,6 +52,10 @@ def main():
     # Dataset selection
     adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad_eval.json')
 
+    with open(adv_squad_path, "w", encoding="utf-8") as f:
+    for item in list_:
+        f.write(json.dumps(item) + "\n")
+
     if args.dataset == 'combined_squad_adv_squad':
         dataset_id = 'qa'
         squad_dataset = datasets.load_dataset('squad')
