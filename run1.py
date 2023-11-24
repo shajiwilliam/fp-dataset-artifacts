@@ -68,7 +68,11 @@ def main():
         
         #dataset = {'train': combined_train_dataset, 'validation': combined_eval_dataset}
         #eval_split = 'validation'
-        dataset = adv_squad_dataset
+
+        if training_args.do_eval:
+            dataset = adv_squad_dataset
+        else:
+            dataset = combined_train_dataset
         eval_split = 'train'
     elif args.dataset.endswith('.json') or args.dataset.endswith('.jsonl'):
         dataset_id = None
