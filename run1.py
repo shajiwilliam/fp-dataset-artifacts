@@ -52,7 +52,7 @@ def main():
     if training_args.do_eval:
         # EVAL ADV Dataset selection
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad_eval_new.json')
-    else
+    else:
         #TRAIN DATASET - Innoculation
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad_train_innoculation1percent.json')
     
