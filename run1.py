@@ -54,7 +54,7 @@ def main():
         adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad_eval_new.json')
     else:
         #TRAIN DATASET - Innoculation
-        adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad_train_innoculation5percent.json')
+        adv_squad_path = os.path.join(os.getcwd(), 'adverse_data_set_squad_train_innoculation10percent.json')
     
     if args.dataset == 'combined_squad_adv_squad':
         dataset_id = 'qa'
